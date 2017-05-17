@@ -1,12 +1,12 @@
 import React from 'react';
 
-class Inventory extends React.Component {
+class AddInventory extends React.Component {
   render(){
     return(
       <ul className="part-list">
-        Inventory
+        Inventory!
       </ul>
     )
   }
 }
-export default Inventory;
+export default AddInventory;

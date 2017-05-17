@@ -24,12 +24,13 @@ class Cart extends Component {
   render() {
     return (
       <div className="site-container">
+
       <ul className="parts-list">
         {Object
         .keys(this.state.parts)
         .map(key => <Part key={key} index={key} details={this.state.parts[key]} />)}
       </ul>
-      <AddInventory addPart={this.addPart} />
+      <AddInventory />
     </div>
     );
   }

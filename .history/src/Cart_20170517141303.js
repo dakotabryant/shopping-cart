@@ -7,7 +7,6 @@ import './cart.css';
 class Cart extends Component {
   constructor(props) {
     super(props);
-    this.addPart = this.addPart.bind(this);
     this.state = {
       parts: computerParts
     }
@@ -17,19 +16,19 @@ class Cart extends Component {
     const parts = {...this.state.parts};
     const timeStamp = Date.now();
 
-    parts[`part-${timeStamp}`] = part;
-    this.setState({parts});
+    parts[``]
   }
 
   render() {
     return (
       <div className="site-container">
+      {this.addPart()}
       <ul className="parts-list">
         {Object
         .keys(this.state.parts)
         .map(key => <Part key={key} index={key} details={this.state.parts[key]} />)}
       </ul>
-      <AddInventory addPart={this.addPart} />
+      <AddInventory />
     </div>
     );
   }
