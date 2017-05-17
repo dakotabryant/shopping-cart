@@ -6,7 +6,7 @@ export default class Part extends React.Component {
   render() {
     const {details, index} = this.props
     const isAvailable = details.quantity > 0;
-    const buttonText = isAvailable ? 'Add to Order' : 'Sold Out';
+    console.log(isAvailable);
     return(
       <li className="part-container">
         <h2 className="name part-details">{details.name}</h2>
@@ -16,7 +16,7 @@ export default class Part extends React.Component {
         <p className="model part-details">{`Model: ${details.model}`}</p>
         <p className="quantity part-details">{`Quantity: ${details.quantity}`}</p>
         <img src={details.image} alt=""/>
-        <button disabled={!isAvailable} onClick={() => this.props.addToOrder(index)}>{buttonText}</button>
+        <button disabled={!isAvailable} onClick={() => this.props.addToOrder(index)}>Add to Order</button>
       </li>
     )
   }

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import AddInventory from './components/AddInventory';
 import Part from './components/Part';
 import Order from './components/Order';
-import base from './base';
 
 import {computerParts} from './sample-parts';
 import './cart.css';
@@ -13,7 +12,7 @@ class Cart extends Component {
     this.addPart = this.addPart.bind(this);
     this.addToOrder = this.addToOrder.bind(this);
     this.state = {
-      parts: {},
+      parts: computerParts,
       order: {}
     }
   }
@@ -30,18 +29,6 @@ class Cart extends Component {
     this.state.parts[key].quantity--;
     this.setState({order})
   }
-
-  componentWillMount() {
-    this.ref = base.syncState('http://localhost', {
-      context: this,
-      state: 'parts'
-    });
-  }
-  componentWillUnmount() {
-    base.removeBinding(this.ref);
-  }
-
-
   render() {
     return (
       <div className="site-container">

@@ -13,7 +13,7 @@ class Cart extends Component {
     this.addPart = this.addPart.bind(this);
     this.addToOrder = this.addToOrder.bind(this);
     this.state = {
-      parts: {},
+      parts: computerParts,
       order: {}
     }
   }
