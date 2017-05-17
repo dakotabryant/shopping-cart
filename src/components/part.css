@@ -1,0 +1,14 @@
+.part-container {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid black;
+  width: 75%;
+}
+
+.part-details {
+  width: 50%
+}
+.part-container img {
+  width: 250px;
+  height: 100%;
+}

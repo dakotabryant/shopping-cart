@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Cart from './Cart';
+import {computerParts} from './sample-parts.js';
 import './index.css';
 
 ReactDOM.render(
-  <App />,
+  <Cart computerParts={computerParts} />,
   document.getElementById('root')
 );
